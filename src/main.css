@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+div {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.splash-ct .splash-text-ct {
+  width: 50%;
+  margin: 3%;
+}
+
+.splash-ct .splash-text-ct h1 {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.splash-ct .splash-text-ct h1 span {
+  color: yellow;
+}
+
+.splash-ct .splash-text-ct p {
+  text-align: left;
+  color: gray;
+}
+
+.splash-ct .splash-img-ct {
+  display: table;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  margin: 3%;
+  border-radius: 100%;
+}
+
+.splash-ct .splash-img-ct img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+
+.collection-ct {
+  overflow: hidden;
+}
+
+.collection-ct .collection-item-ct {
+  max-width: 500px;
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.collection-ct .collection-item-ct img {
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  transform: translate(var(--mouse-x), var(--mouse-y)) scale(var(--scale));
+  transition: all ease-in;
+}
+
+.grow {
+  -webkit-animation: grow 1s forwards;
+          animation: grow 1s forwards;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@-webkit-keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+/*# sourceMappingURL=main.css.map */

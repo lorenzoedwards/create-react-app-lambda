@@ -37,4 +37,31 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script> 
+    document.addEventListener("DOMContentLoaded", function() {
+        let collectionImages = document.querySelectorAll(".collection-item-ct");
+
+        var imageMover = function(event) {
+          let  pos = event.currentTarget.getBoundingClientRect();
+          let x =  event.clientX - pos.left;
+          let y  = event.clientY - pos.top;
+
+            event.target.closest("img").style.setProperty('--scale', "1.2");
+            event.target.closest("img").style.setProperty('--mouse-x', x / 10 + "px");
+            event.target.closest("img").style.setProperty('--mouse-y', y / 10 + "px");
+        };
+
+        var imageMoverReset = function(event) {
+            event.target.closest("img").style.setProperty('--scale', "1");
+            event.target.closest("img").style.setProperty('--mouse-x', "0px");
+            event.target.closest("img").style.setProperty('--mouse-y', "0px");
+        };
+
+        for (var x = 0; x < collectionImages.length; x++) {
+            collectionImages[x].addEventListener("mousemove", imageMover);
+            collectionImages[x].addEventListener("mouseout", imageMoverReset);
+        } 
+    });
+  </script> 
 </html>
